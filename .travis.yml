@@ -13,8 +13,7 @@ before_install:
 
 deploy:
   provider: releases
-  api_key:
-    secure: 4f47237bf27a67c23309e31cb4d0e468a333d0e9
+  api_key: '$GITHUB_API_KEY'
   file: IndustrialExpansion-1.0d.jar
   skip_cleanup: true
   on:
