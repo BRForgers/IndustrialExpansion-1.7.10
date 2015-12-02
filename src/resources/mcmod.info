@@ -1,0 +1,16 @@
+[
+{
+  "modid": "IndustrialExpansion",
+  "name": "Industrial Expansion",
+  "description": "...",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://brazillianforgers.esy.es/",
+  "updateUrl": "",
+  "authorList": ["TheBrazillianForgersTeam","Armelin1"],
+  "credits": "Armelin1 for the Idea and Textures",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [BRForgersCore; ThermalExpansion]
+}
+]
