@@ -14,7 +14,7 @@ before_install:
 deploy:
   provider: releases
   api_key:
-    secure: 9ec2c91c5bbb66ca3e028168a3ff7f65ca77b8bb
+    secure: 4f47237bf27a67c23309e31cb4d0e468a333d0e9
   file: IndustrialExpansion-1.0d.jar
   skip_cleanup: true
   on:
