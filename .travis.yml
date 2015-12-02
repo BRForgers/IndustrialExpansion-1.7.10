@@ -10,3 +10,11 @@ branches:
     
 before_install:
  - chmod +x gradlew
+
+deploy:
+  provider: releases
+  api_key: "9ec2c91c5bbb66ca3e028168a3ff7f65ca77b8bb"
+  file: "IndustrialExpansion-1.0a"
+  skip_cleanup: true
+  on:
+    tags: true
