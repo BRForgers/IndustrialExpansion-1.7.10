@@ -1,2 +1,5 @@
 //Interface
 itemGroup.tabArchitect=Industrial Expansion
+
+//Items
+item.TestItem.name=Test
