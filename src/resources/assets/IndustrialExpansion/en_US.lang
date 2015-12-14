@@ -1,5 +1,5 @@
 //Interface
-itemGroup.tabArchitect=Industrial Expansion
+itemGroup.tabIndustrialExpansion=Industrial Expansion
 
 //Items
 item.TestItem.name=Test
