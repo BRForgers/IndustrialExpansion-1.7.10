@@ -10,7 +10,7 @@ import net.minecraftforge.common.util.EnumHelper;
 public class ItemManager
 {
     //Item List
-    public static Item.ToolMaterial TEST = EnumHelper.addToolMaterial("TEST", 6, -1, 20.0F, 96.0F, 30);
+    public static Item.ToolMaterial TEST = EnumHelper.addToolMaterial("TEST", 3, -1, 20.0F, 96.0F, 30);
     public static Item TestItem;
 
     //Init Method
