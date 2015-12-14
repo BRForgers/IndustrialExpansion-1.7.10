@@ -11,7 +11,7 @@ branches:
 before_install:
  - chmod +x gradlew
 
-deploy:
+//deploy:
   provider: releases
   api_key:
     secure: d57978742fc603fa40034c93086c75e976a2e6b4
