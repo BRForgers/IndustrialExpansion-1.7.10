@@ -20,7 +20,7 @@ public class TestItem extends ItemPickaxe
 {
     @SuppressWarnings("rawtypes")
     private static Set effectiveAgainst = Sets.newHashSet(new Block[] {Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, Blocks.snow_layer, Blocks.snow, Blocks.clay, Blocks.farmland, Blocks.soul_sand, Blocks.mycelium});
-    protected TestItem(String unlocalizedName, ToolMaterial material)
+    public TestItem(String unlocalizedName, ToolMaterial material)
     {
         super (material);
         this.setUnlocalizedName("Test");
