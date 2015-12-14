@@ -19,7 +19,7 @@ apply plugin: 'forge'
 
 version = "BETA-v1.0.1"
 group= "brazillianforgers.mods.IndustrialExpansion" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "IndustrialExpansion-"
+archivesBaseName = "IndustrialExpansion"
 
 minecraft {
     version = "1.7.10-10.13.4.1448-1.7.10"
