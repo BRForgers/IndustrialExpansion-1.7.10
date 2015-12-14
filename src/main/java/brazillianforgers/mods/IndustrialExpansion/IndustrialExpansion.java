@@ -31,6 +31,7 @@ public class IndustrialExpansion {
     public static CreativeTabs tabIndustrialExpansion = new CreativeTabs("tabIndustrialExpansion") {
 
         @Override
+        @SideOnly(Side.CLIENT)
         public Item getTabIconItem() {
             return Items.diamond;
         }
