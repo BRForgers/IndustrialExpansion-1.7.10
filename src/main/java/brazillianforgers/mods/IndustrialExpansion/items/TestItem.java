@@ -23,9 +23,9 @@ public class TestItem extends ItemPickaxe
     protected TestItem(String unlocalizedName, ToolMaterial material)
     {
         super (material);
-        setUnlocalizedName("Test");
-        setTextureName(Lib.MODID + ":" + "TestItem");
-        setCreativeTab(IndustrialExpansion.tabIndustrialExpansion);
+        this.setUnlocalizedName("Test");
+        this.setTextureName(Lib.MODID + ":" + "TestItem");
+        this.setCreativeTab(IndustrialExpansion.tabIndustrialExpansion);
 
     }
     @Override
