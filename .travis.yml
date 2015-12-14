@@ -15,8 +15,7 @@ deploy:
   provider: releases
   api_key:
     secure: 35bb61baad5ffd735cbc5099a989f09825ccdb04
-    file: build/libs/*
-    file_glob: true
-    skip_cleanup: true
+  file: IndustrialExpansion-1.0d.jar
+  skip_cleanup: true
   on:
     tags: false
