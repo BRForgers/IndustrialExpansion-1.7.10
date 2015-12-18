@@ -3,6 +3,7 @@ package brazillianforgers.mods.IndustrialExpansion.items;
 import java.util.Set;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemPickaxe;
@@ -35,6 +36,8 @@ public class TestItem extends ItemPickaxe
 
     @Override
     public float func_150893_a(ItemStack stack, Block block) {
+        if (block.getMaterial() == Material.wood || block.getMaterial() == Material.vine || block.getMaterial() == Material.plants)
+            return this.efficiencyOnProperMaterial;
         return effectiveAgainst.contains(block) ? this.efficiencyOnProperMaterial : super.func_150893_a(stack, block);
     }
 
