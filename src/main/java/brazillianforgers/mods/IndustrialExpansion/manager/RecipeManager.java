@@ -15,8 +15,8 @@ public class RecipeManager {
     public static void init() {
         //Base: addInductionSmelterRecipe(CustoDeEnergia, Input1, Input2, Output1);
         //Um Input/Output seria algo tipo: new ItemStack(ItemManager.NomeDoItem)
-        addInductionSmelterRecipe(ConfigHandler.energyCoalBall, new ItemStack(dustCoalHelper.dustCoal), new ItemStack(Items.flint), ItemManager.CoalBall);
-        addInductionSmelterRecipe(ConfigHandler.energyCoalChunk, new ItemStack(), new ItemStack(Blocks.obsidian), MetaItemGetter.phasedIron);
+        addInductionSmelterRecipe(ConfigHandler.energyCoalBall, dustCoalHelper.dustCoal, new ItemStack(Items.flint), ItemManager.CoalBall);
+        addInductionSmelterRecipe(ConfigHandler.energyCoalChunk, new ItemStack(ItemManager.BurnedCoalBall), new ItemStack(Blocks.obsidian), ItemStack(Items.diamond);
     }
 
     public static void addInductionSmelterRecipe(int energyCost, ItemStack primaryInput, ItemStack secondaryInput, ItemStack primaryOutput)
@@ -33,6 +33,6 @@ public class RecipeManager {
         primaryOutput.writeToNBT(recipeToSend.getCompoundTag("primaryOutput"));
 
         //Esse é o Comando que Envia coisas pro Thermal. Tem vários exemplos desse pelos repositórios do CoFH
-        FMLInterModComms.sendMessage("ThermalExpansion", "SmelterRecipe", toSend);
+        FMLInterModComms.sendMessage("ThermalExpansion", "SmelterRecipe", recipeToSend);
     }
 }
