@@ -3,18 +3,11 @@ package brazillianforgers.mods.IndustrialExpansion.helper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.oredict.ShapedOreRecipe;
 import cpw.mods.fml.common.event.FMLInterModComms;
-
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fluids.FluidStack;
 
-
-import static net.minecraftforge.oredict.OreDictionary.itemMatches;
-
-import java.util.ArrayList;
 
 public class ThermalExpansionHelper {
     public static final int coalDustMeta = 2;
