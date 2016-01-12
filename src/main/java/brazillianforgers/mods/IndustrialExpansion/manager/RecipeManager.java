@@ -9,14 +9,14 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import brazillianforgers.mods.IndustrialExpansion.helper.dustCoalHelper;
+import brazillianforgers.mods.IndustrialExpansion.helper.ThermalDustsHelper;
 
 public class RecipeManager {
     public static void init() {
         //Base: addInductionSmelterRecipe(CustoDeEnergia, Input1, Input2, Output1);
-        //Um Input/Output seria algo tipo: new ItemStack(ItemManager.NomeDoItem)
-        addInductionSmelterRecipe(ConfigHandler.energyCoalBall, dustCoalHelper.dustCoal, new ItemStack(Items.flint), ItemManager.CoalBall);
-        addInductionSmelterRecipe(ConfigHandler.energyCoalChunk, new ItemStack(ItemManager.BurnedCoalBall), new ItemStack(Blocks.obsidian), ItemStack(Items.diamond);
+        //Um Input/Output seria algo tipo: new ItemStack(ItemManager.NomeDoItem, quantidade)
+        addInductionSmelterRecipe(ConfigHandler.energyCoalBall, new ItemStack(ThermalDustsHelper.dustItem, 8, 2), new ItemStack(Items.flint), new ItemStack(ItemManager.CoalBall));
+        addInductionSmelterRecipe(ConfigHandler.energyCoalChunk, new ItemStack(ItemManager.BurnedCoalBall, 8), new ItemStack(Blocks.obsidian), new ItemStack(Items.diamond));
     }
 
     public static void addInductionSmelterRecipe(int energyCost, ItemStack primaryInput, ItemStack secondaryInput, ItemStack primaryOutput)
