@@ -34,8 +34,8 @@ public class ConfigHandler {
     private static void loadConfiguration()
     {
         energyCoalBall  = configuration.getInt("energyCoalBall", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of Coal Ball.");
-        energyCoalChunk = configuration.getInt("energyCoalChunk", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of CoalChunk.");
-        energyBurnedCoalBall = configuration.getInt("energyBurnedCoalBall", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of BurnedCoalBall.");
+        energyCoalChunk = configuration.getInt("energyCoalChunk", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of Coal Chunk.");
+        energyBurnedCoalBall = configuration.getInt("energyBurnedCoalBall", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of Burned Coal Ball.");
         energyDiamond = configuration.getInt("energyDiamond", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of Diamond.");
 
         if (configuration.hasChanged())

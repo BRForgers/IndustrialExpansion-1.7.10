@@ -3,3 +3,6 @@ itemGroup.tabIndustrialExpansion=Industrial Expansion
 
 //Items
 item.Test.name=Test
+item.CoalBall.name=Coal Ball
+item.BurnedCoalBall.name=Burned Coal Ball
+item.CoalChunk=Coal Chunk

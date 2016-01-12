@@ -3,11 +3,9 @@ package brazillianforgers.mods.IndustrialExpansion.manager;
 import brazillianforgers.mods.IndustrialExpansion.IndustrialExpansion;
 import brazillianforgers.mods.IndustrialExpansion.helper.ConfigHandler;
 import brazillianforgers.mods.IndustrialExpansion.manager.ItemManager;
-import cpw.mods.fml.common.event.FMLInterModComms;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import brazillianforgers.mods.IndustrialExpansion.helper.ThermalExpansionHelper;
 
 public class RecipeManager {
