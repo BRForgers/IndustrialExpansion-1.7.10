@@ -1,5 +1,6 @@
 package brazillianforgers.mods.IndustrialExpansion;
 
+import brazillianforgers.mods.IndustrialExpansion.helper.ConfigHandler;
 import brazillianforgers.mods.IndustrialExpansion.proxy.CommonProxy;
 import org.apache.logging.log4j.Logger;
 
@@ -45,8 +46,7 @@ public class IndustrialExpansion {
     public static void preInit(FMLPreInitializationEvent e)
     {
         logger = e.getModLog();
-        //config = new Configuration(e.getSuggestedConfigurationFile());
-
+        ConfigHandler.init(e.getSuggestedConfigurationFile());
         proxy.preInit();
     }
 
