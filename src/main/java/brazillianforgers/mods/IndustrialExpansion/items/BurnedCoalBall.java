@@ -8,7 +8,8 @@ import net.minecraft.item.Item;
 public class BurnedCoalBall extends Item {
     public BurnedCoalBall()
     {
-        setUnlocalizedName("BurnedCoalBall");
-        setTextureName(Lib.MODID + ":" + "BurnedCoalBall");
+        this.setUnlocalizedName("BurnedCoalBall");
+        this.setTextureName(Lib.MODID + ":" + "BurnedCoalBall");
+        this.setCreativeTab(IndustrialExpansion.tabIndustrialExpansion);
     }
 }
