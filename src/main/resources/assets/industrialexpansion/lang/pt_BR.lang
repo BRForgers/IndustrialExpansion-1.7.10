@@ -5,4 +5,4 @@ itemGroup.tabIndustrialExpansion=Industrial Expansion
 item.Test.name=Test
 item.CoalBall.name=Bola de Carvão
 item.BurnedCoalBall.name=Bola de Carvão Aquecida
-item.CoalChunk=Pedaço Grosso de Carvão
+item.CoalChunk.name=Pedaço Grosso de Carvão

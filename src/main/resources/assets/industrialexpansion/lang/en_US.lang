@@ -5,4 +5,4 @@ itemGroup.tabIndustrialExpansion=Industrial Expansion
 item.Test.name=Test
 item.CoalBall.name=Coal Ball
 item.BurnedCoalBall.name=Burned Coal Ball
-item.CoalChunk=Coal Chunk
+item.CoalChunk.name=Coal Chunk
