@@ -8,7 +8,7 @@ public class CoalBall extends Item {
     public CoalBall()
     {
         this.setUnlocalizedName("CoalBall");
-        this.setTextureName(Lib.MODID + ":" + "CoalBall");
+        this.setTextureName(Lib.RESOURCE_PATH + "CoalBall");
         this.setCreativeTab(IndustrialExpansion.tabIndustrialExpansion);
     }
 }

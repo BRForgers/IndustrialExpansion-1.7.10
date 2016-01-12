@@ -9,7 +9,7 @@ public class BurnedCoalBall extends Item {
     public BurnedCoalBall()
     {
         this.setUnlocalizedName("BurnedCoalBall");
-        this.setTextureName(Lib.MODID + ":" + "BurnedCoalBall");
+        this.setTextureName(Lib.RESOURCE_PATH + "BurnedCoalBall");
         this.setCreativeTab(IndustrialExpansion.tabIndustrialExpansion);
     }
 }

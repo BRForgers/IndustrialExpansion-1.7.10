@@ -25,7 +25,7 @@ public class TestItem extends ItemPickaxe
     {
         super (material);
         this.setUnlocalizedName("Test");
-        this.setTextureName(Lib.TEXTURE_PATH + "TestItem");
+        this.setTextureName(Lib.RESOURCE_PATH + "TestItem");
         this.setCreativeTab(IndustrialExpansion.tabIndustrialExpansion);
 
     }

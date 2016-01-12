@@ -8,7 +8,7 @@ public class Lib {
     public static final String DEPS = "required-after:BRForgersCore@[1.2,);required-after:ThermalExpansion";// + ";required-after:MODID"; for Each other MOD
 
     //Little Helper, huh?
-    public static final String TEXTURE_PATH = MODID + ":";
+    public static final String RESOURCE_PATH = MODID + ":";
     public static final String UPDATEURL = "https://raw.githubusercontent.com/TheBrazillianForgersTeam/IndustrialExpansion/master/latest.txt";
 
     //Easter Eggs

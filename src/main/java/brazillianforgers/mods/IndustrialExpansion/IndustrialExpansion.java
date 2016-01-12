@@ -20,30 +20,34 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;
 import brazillianforgers.core.UpdateManager;
 import brazillianforgers.lib.ObjectStorage;
+import brazillianforgers.lib.SilentLogger;
 
 @Mod(modid = Lib.MODID, useMetadata = true, dependencies = Lib.DEPS, version = Lib.VERSION)
 public class IndustrialExpansion {
     @Instance(Lib.MODID)
     public static IndustrialExpansion instance;
+    
+    public static Logger logger = new SilentLogger(); //This is a Temp Logger until proper init.
 
     @SidedProxy(clientSide = Lib.CLIENT, serverSide = Lib.COMMONPROXY)
     public static CommonProxy proxy;
 
-    public static CreativeTabs tabIndustrialExpansion = new CreativeTabs("tabIndustrialExpansion") {
-
+    public static CreativeTabs tabIndustrialExpansion = new CreativeTabs("tabIndustrialExpansion")
+    {
         @Override
         @SideOnly(Side.CLIENT)
-        public Item getTabIconItem() {
+        public Item getTabIconItem()
+        {
             return Items.diamond;
         }
     };
 
-    static Logger logger;
+
     //static Configuration config;
     //private static ObjectStorage configLib = new ObjectStorage();
 
     @EventHandler
-    public static void preInit(FMLPreInitializationEvent e)
+    public void preInit(FMLPreInitializationEvent e)
     {
         logger = e.getModLog();
         ConfigHandler.init(e.getSuggestedConfigurationFile());
@@ -51,13 +55,13 @@ public class IndustrialExpansion {
     }
 
     @EventHandler
-    public static void Init(FMLInitializationEvent e)
+    public void init(FMLInitializationEvent e)
     {
 
     }
 
     @EventHandler
-    public static void postInit(FMLPostInitializationEvent e)
+    public void postInit(FMLPostInitializationEvent e)
     {
         logger.info("Checking for Updates...");
         UpdateManager.check(Lib.UPDATEURL, logger, Lib.VERSION, Lib.MODNAME);

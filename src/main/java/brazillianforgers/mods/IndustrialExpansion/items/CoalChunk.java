@@ -9,6 +9,6 @@ public class CoalChunk extends Item {
     public CoalChunk()
     {
         this.setUnlocalizedName("CoalChunk");
-        this.setTextureName(Lib.MODID + ":" + "CoalChunk");
+        this.setTextureName(Lib.RESOURCE_PATH + "CoalChunk");
     }
 }

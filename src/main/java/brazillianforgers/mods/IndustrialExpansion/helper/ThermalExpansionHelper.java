@@ -18,11 +18,15 @@ import java.util.ArrayList;
 
 public class ThermalExpansionHelper {
     public static final int coalDustMeta = 2;
-    public static Item dustItem = GameRegistry.findItem("ThermalFoundation", "material");
+    private static Item dustItem = null;
     
     
     public static ItemStack getDustItem(int dustMeta, int amount)
     {
+    	if (dustItem == null)
+    	{
+    		dustItem = GameRegistry.findItem("ThermalFoundation", "material");
+    	}
     	return new ItemStack(dustItem, amount, dustMeta);
     }
     
