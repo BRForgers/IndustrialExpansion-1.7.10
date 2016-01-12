@@ -1,7 +1,14 @@
 package brazillianforgers.mods.IndustrialExpansion.items;
 
-/**
- * Created by hp on 11/01/2016.
- */
-public class CoalChunk {
+
+import brazillianforgers.mods.IndustrialExpansion.IndustrialExpansion;
+import brazillianforgers.mods.IndustrialExpansion.Lib;
+import net.minecraft.item.Item;
+
+public class CoalChunk extends Item {
+    public CoalChunk()
+    {
+        setUnlocalizedName("CoalChunk");
+        setTextureName(Lib.MODID + ":" + "CoalChunk");
+    }
 }

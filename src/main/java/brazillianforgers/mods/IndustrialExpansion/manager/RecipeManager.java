@@ -15,8 +15,8 @@ public class RecipeManager {
     public static void init() {
         //Base: addInductionSmelterRecipe(CustoDeEnergia, Input1, Input2, Output1);
         //Um Input/Output seria algo tipo: new ItemStack(ItemManager.NomeDoItem)
-        addSmelterRecipe(ConfigHandler.energyCoalBall, new ItemStack(dustCoalHelper.dustCoal), new ItemStack(Items.flint), ItemManager.CoalBall);
-        addSmelterRecipe(ConfigHandler.energyCoalChunk, new ItemStack(), new ItemStack(Blocks.obsidian), MetaItemGetter.phasedIron);
+        addInductionSmelterRecipe(ConfigHandler.energyCoalBall, new ItemStack(dustCoalHelper.dustCoal), new ItemStack(Items.flint), ItemManager.CoalBall);
+        addInductionSmelterRecipe(ConfigHandler.energyCoalChunk, new ItemStack(), new ItemStack(Blocks.obsidian), MetaItemGetter.phasedIron);
     }
 
     public static void addInductionSmelterRecipe(int energyCost, ItemStack primaryInput, ItemStack secondaryInput, ItemStack primaryOutput)

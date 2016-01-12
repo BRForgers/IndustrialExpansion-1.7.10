@@ -1,7 +1,13 @@
 package brazillianforgers.mods.IndustrialExpansion.items;
 
-/**
- * Created by hp on 11/01/2016.
- */
-public class CoalBall {
+import brazillianforgers.mods.IndustrialExpansion.IndustrialExpansion;
+import brazillianforgers.mods.IndustrialExpansion.Lib;
+import net.minecraft.item.Item;
+
+public class CoalBall extends Item {
+    public CoalBall()
+    {
+        setUnlocalizedName("CoalBall");
+        setTextureName(Lib.MODID + ":" + "CoalBall");
+    }
 }
