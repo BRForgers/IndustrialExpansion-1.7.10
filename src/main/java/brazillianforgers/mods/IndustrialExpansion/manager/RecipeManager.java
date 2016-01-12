@@ -8,27 +8,29 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import cofh.api.item.
 
 public class RecipeManager {
     public static void init() {
+        //Base: addInductionSmelterRecipe(CustoDeEnergia, Input1, Input2, Output1);
+        //Um Input/Output seria algo tipo: new ItemStack(ItemManager.NomeDoItem)
         addSmelterRecipe(ConfigHandler.energyCoalBall, new ItemStack(Items.coal), new ItemStack(Items.flint), MetaItemGetter.conductiveIron);
         addSmelterRecipe(ConfigHandler.energyPhasedIron, new ItemStack(Items.iron_ingot), new ItemStack(Items.ender_pearl), MetaItemGetter.phasedIron);
     }
 
-    public static void addSmelterRecipe(int paramInt, ItemStack paramItemStack1, ItemStack paramItemStack2, ItemStack paramItemStack3)
+    public static void addInductionSmelterRecipe(int energyCost, ItemStack primaryInput, ItemStack secondaryInput, ItemStack primaryOutput)
     {
-        NBTTagCompound toSend = new NBTTagCompound();
+        NBTTagCompound recipeToSend = new NBTTagCompound();
 
-        toSend.setInteger("energy", paramInt);
-        toSend.setTag("primaryInput", new NBTTagCompound());
-        toSend.setTag("secondaryInput", new NBTTagCompound());
-        toSend.setTag("primaryOutput", new NBTTagCompound());
+        recipeToSend.setInteger("energy", energyCost);
+        recipeToSend.setTag("primaryInput", new NBTTagCompound());
+        recipeToSend.setTag("secondaryInput", new NBTTagCompound());
+        recipeToSend.setTag("primaryOutput", new NBTTagCompound());
 
-        paramItemStack1.writeToNBT(toSend.getCompoundTag("primaryInput"));
-        paramItemStack2.writeToNBT(toSend.getCompoundTag("secondaryInput"));
-        paramItemStack3.writeToNBT(toSend.getCompoundTag("primaryOutput"));
+        primaryInput.writeToNBT(recipeToSend.getCompoundTag("primaryInput"));
+        secondaryInput.writeToNBT(recipeToSend.getCompoundTag("secondaryInput"));
+        primaryOutput.writeToNBT(recipeToSend.getCompoundTag("primaryOutput"));
 
+        //Esse é o Comando que Envia coisas pro Thermal. Tem vários exemplos desse pelos repositórios do CoFH
         FMLInterModComms.sendMessage("ThermalExpansion", "SmelterRecipe", toSend);
     }
 }
