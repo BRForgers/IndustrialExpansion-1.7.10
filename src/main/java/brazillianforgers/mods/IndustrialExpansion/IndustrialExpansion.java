@@ -18,8 +18,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;
-import brazillianforgers.core.UpdateManager;
-import brazillianforgers.lib.ObjectStorage;
+import brazillianforgers.core.UpdateChecker;
 import brazillianforgers.lib.SilentLogger;
 
 @Mod(modid = Lib.MODID, useMetadata = true, dependencies = Lib.DEPS, version = Lib.VERSION)
@@ -52,6 +51,7 @@ public class IndustrialExpansion {
         logger = e.getModLog();
         ConfigHandler.init(e.getSuggestedConfigurationFile());
         proxy.preInit();
+        UpdateChecker.addToUpdateChecker(Lib.MODID, Lib.MODNAME, Lib.UPDATEURL, Lib.VERSION, logger);
     }
 
     @EventHandler
@@ -63,7 +63,6 @@ public class IndustrialExpansion {
     @EventHandler
     public void postInit(FMLPostInitializationEvent e)
     {
-        logger.info("Checking for Updates...");
-        UpdateManager.check(Lib.UPDATEURL, logger, Lib.VERSION, Lib.MODNAME);
+    	
     }
 }
