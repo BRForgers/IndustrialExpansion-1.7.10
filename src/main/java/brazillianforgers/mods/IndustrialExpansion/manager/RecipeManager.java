@@ -18,7 +18,7 @@ public class RecipeManager {
         ThermalExpansionHelper.addSmelterRecipe(ConfigHandler.energyCoalChunk, new ItemStack(ItemManager.BurnedCoalBall, 8), new ItemStack(Blocks.obsidian), new ItemStack(ItemManager.CoalChunk));
         ThermalExpansionHelper.addFurnaceRecipe(ConfigHandler.energyBurnedCoalBall, new ItemStack(ItemManager.CoalBall),new ItemStack(ItemManager.BurnedCoalBall));
         ThermalExpansionHelper.addFurnaceRecipe(ConfigHandler.energyDiamond,new ItemStack(ItemManager.CoalChunk),new ItemStack(Items.diamond));
-        GameRegistry.addShapedRecipe(new ItemStack(ItemManager.MultiTool,1),
+        GameRegistry.addShapedRecipe(new ItemStack(ItemManager.MultiTool,1),new Object[]{
                                         " A ","BCD","EFG",
                                         "A",Items.diamond_sword,
                                         "B",Items.diamond_pickaxe,
@@ -26,7 +26,7 @@ public class RecipeManager {
                                         "D",Items.diamond_shovel,
                                         "E",Items.diamond_axe,
                                         "F",Items.ender_pearl,
-                                        "G",Items.diamond_hoe);
+                                        "G",Items.diamond_hoe});
        // ThermalExpansionHelper.addTransposerFill(ConfigHandler.energyMultiToolBase,new ItemStack(ItemManager.MultiToolBase),new ItemStack(ItemManager.MultiTool),);
     }
 }
