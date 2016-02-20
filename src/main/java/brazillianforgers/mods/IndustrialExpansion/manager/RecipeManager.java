@@ -9,6 +9,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import brazillianforgers.mods.IndustrialExpansion.helper.ThermalExpansionHelper;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
 
 public class RecipeManager {
     public static void init() {
@@ -18,7 +20,7 @@ public class RecipeManager {
         ThermalExpansionHelper.addSmelterRecipe(ConfigHandler.energyCoalChunk, new ItemStack(ItemManager.BurnedCoalBall, 8), new ItemStack(Blocks.obsidian), new ItemStack(ItemManager.CoalChunk));
         ThermalExpansionHelper.addFurnaceRecipe(ConfigHandler.energyBurnedCoalBall, new ItemStack(ItemManager.CoalBall),new ItemStack(ItemManager.BurnedCoalBall));
         ThermalExpansionHelper.addFurnaceRecipe(ConfigHandler.energyDiamond,new ItemStack(ItemManager.CoalChunk),new ItemStack(Items.diamond));
-        GameRegistry.addShapedRecipe(new ItemStack(ItemManager.MultiTool,1),
+        GameRegistry.addShapedRecipe(new ItemStack(ItemManager.MultiToolBase,1),
                                         " A ","BCD","EFG",
                                         'A',new ItemStack(Items.diamond_sword),
                                         'B',new ItemStack(Items.diamond_pickaxe),
@@ -27,6 +29,6 @@ public class RecipeManager {
                                         'E',new ItemStack(Items.diamond_axe),
                                         'F',new ItemStack(Items.ender_pearl),
                                         'G',new ItemStack(Items.diamond_hoe));
-       // ThermalExpansionHelper.addTransposerFill(ConfigHandler.energyMultiToolBase,new ItemStack(ItemManager.MultiToolBase),new ItemStack(ItemManager.MultiTool),);
+        ThermalExpansionHelper.addTransposerFill(ConfigHandler.energyMultiToolBase,new ItemStack(ItemManager.MultiToolBase),new ItemStack(ItemManager.MultiTool),new FluidStack(FluidRegistry.getFluid("ender"), 1000), false);
     }
 }
