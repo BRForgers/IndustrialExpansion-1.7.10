@@ -1,44 +1,66 @@
 package brazillianforgers.mods.IndustrialExpansion.items;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Set;
+
+import org.apache.commons.lang3.ArrayUtils;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.EnumRarity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
-import brazillianforgers.mods.IndustrialExpansion.IndustrialExpansion;
-import brazillianforgers.mods.IndustrialExpansion.Lib;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import cpw.mods.fml.common.eventhandler.Event.Result;
+import brazillianforgers.mods.IndustrialExpansion.IndustrialExpansion;
+import brazillianforgers.mods.IndustrialExpansion.Lib;
 
-public class TestItem extends ItemPickaxe
-{
-    @SuppressWarnings("rawtypes")
-    private static Set effectiveAgainst = Sets.newHashSet(new Block[] {Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, Blocks.snow_layer, Blocks.snow, Blocks.clay, Blocks.farmland, Blocks.soul_sand, Blocks.mycelium});
-    public TestItem(ToolMaterial material)
-    {
+public class MultiTool extends ItemPickaxe {
+    private Item pickaxe, axe, shovel;
+
+    private class InternalMultiToolPickaxe extends ItemPickaxe {public InternalMultiToolPickaxe(ToolMaterial material) {super(material);}}
+    private class InternalMultiToolShovel extends ItemSpade {public InternalMultiToolShovel(ToolMaterial material) {super(material);}}
+    private class InternalMultiToolAxe extends ItemAxe {public InternalMultiToolAxe(ToolMaterial material) {super(material);}}
+
+    public MultiTool(ToolMaterial material) {
         super (material);
-        this.setUnlocalizedName("Test");
-        this.setTextureName(Lib.RESOURCE_PATH + "TestItem");
+        pickaxe = new InternalMultiToolPickaxe(material);
+        shovel = new InternalMultiToolShovel(material);
+        axe = new InternalMultiToolAxe(material);
         this.setCreativeTab(IndustrialExpansion.tabIndustrialExpansion);
-
+        this.setUnlocalizedName("MultiTool");
+        this.setTextureName(Lib.RESOURCE_PATH + "MultiTool");
     }
+
     @Override
     public boolean func_150897_b(Block block) {
-        return effectiveAgainst.contains(block) ? true : super.func_150897_b(block);
+        return pickaxe.func_150897_b(block) || axe.func_150897_b(block) || shovel.func_150897_b(block);
     }
 
     @Override
     public float func_150893_a(ItemStack stack, Block block) {
-        if (block.getMaterial() == Material.wood || block.getMaterial() == Material.vine || block.getMaterial() == Material.plants)
-            return this.efficiencyOnProperMaterial;
-        return effectiveAgainst.contains(block) ? this.efficiencyOnProperMaterial : super.func_150893_a(stack, block);
+        //Maior, mais rápido
+        return Collections.max(
+                Arrays.asList(
+                        new Float[]{
+                                Float.valueOf(pickaxe.func_150893_a(stack, block)),
+                                Float.valueOf(axe.func_150893_a(stack, block)),
+                                Float.valueOf(shovel.func_150893_a(stack, block))
+                        }
+                )
+        ).floatValue();
     }
 
     @Override
@@ -47,7 +69,9 @@ public class TestItem extends ItemPickaxe
     }
 
     @Override
+
     public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
+        //Kibado do ItemHoe
         if (!player.canPlayerEdit(x, y, z, side, stack)) {
             return false;
         } else {
@@ -80,5 +104,5 @@ public class TestItem extends ItemPickaxe
             }
         }
     }
-
 }
+

@@ -6,3 +6,5 @@ item.Test.name=Test
 item.CoalBall.name=Bola de Carvão
 item.BurnedCoalBall.name=Bola de Carvão Aquecida
 item.CoalChunk.name=Pedaço Grosso de Carvão
+item.MultiTool.name=MultiTool
+item.MultiToolBase.name=MultiTool (Vazio)
