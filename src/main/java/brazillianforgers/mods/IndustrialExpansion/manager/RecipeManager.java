@@ -18,15 +18,15 @@ public class RecipeManager {
         ThermalExpansionHelper.addSmelterRecipe(ConfigHandler.energyCoalChunk, new ItemStack(ItemManager.BurnedCoalBall, 8), new ItemStack(Blocks.obsidian), new ItemStack(ItemManager.CoalChunk));
         ThermalExpansionHelper.addFurnaceRecipe(ConfigHandler.energyBurnedCoalBall, new ItemStack(ItemManager.CoalBall),new ItemStack(ItemManager.BurnedCoalBall));
         ThermalExpansionHelper.addFurnaceRecipe(ConfigHandler.energyDiamond,new ItemStack(ItemManager.CoalChunk),new ItemStack(Items.diamond));
-        GameRegistry.addShapedRecipe(new ItemStack(ItemManager.MultiTool,1),new Object[]{
+        GameRegistry.addShapedRecipe(new ItemStack(ItemManager.MultiTool,1),
                                         " A ","BCD","EFG",
-                                        "A",Items.diamond_sword,
-                                        "B",Items.diamond_pickaxe,
-                                        "C",Items.diamond,
-                                        "D",Items.diamond_shovel,
-                                        "E",Items.diamond_axe,
-                                        "F",Items.ender_pearl,
-                                        "G",Items.diamond_hoe});
+                                        'A',new ItemStack(Items.diamond_sword),
+                                        'B',new ItemStack(Items.diamond_pickaxe),
+                                        'C',new ItemStack(Items.diamond),
+                                        'D',new ItemStack(Items.diamond_shovel),
+                                        'E',new ItemStack(Items.diamond_axe),
+                                        'F',new ItemStack(Items.ender_pearl),
+                                        'G',new ItemStack(Items.diamond_hoe));
        // ThermalExpansionHelper.addTransposerFill(ConfigHandler.energyMultiToolBase,new ItemStack(ItemManager.MultiToolBase),new ItemStack(ItemManager.MultiTool),);
     }
 }
