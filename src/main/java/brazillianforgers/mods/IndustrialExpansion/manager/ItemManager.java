@@ -20,9 +20,9 @@ public class ItemManager
     public static Item CoalChunk = new CoalChunk();
     public static Item MultiTool = new MultiTool(MULTITOOL);
     public static Item MultiToolBase = new MultiToolBase();
-    public static Item MultiToolBase2 = new MultiToolBase();
-    public static Item MultiToolBase3 = new MultiToolBase();
-    public static Item MultiToolBase4 = new MultiToolBase();
+    public static Item MultiToolBase2 = new MultiToolBase2();
+    public static Item MultiToolBase3 = new MultiToolBase3();
+    public static Item MultiToolBase4 = new MultiToolBase4();
 
 
     //Init Method
