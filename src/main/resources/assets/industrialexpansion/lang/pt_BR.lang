@@ -8,3 +8,6 @@ item.BurnedCoalBall.name=Bola de Carvão Aquecida
 item.CoalChunk.name=Pedaço Grosso de Carvão
 item.MultiTool.name=MultiTool
 item.MultiToolBase.name=MultiTool (Vazio)
+item.MultiToolBase2.name=MultiTool (25%)
+item.MultiToolBase3.name=MultiTool (50%)
+item.MultiToolBase4.name=MultiTool (75%)

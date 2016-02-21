@@ -15,7 +15,7 @@ public class ConfigHandler {
     public static int energyCoalChunk = 0;
     public static int energyBurnedCoalBall = 0;
     public static int energyDiamond = 0;
-    public static int energyMultiToolBase = 0;
+    public static int energyMultiToolBases = 0;
 
     public static void init(File configFile) {
         if (configuration == null) {
@@ -38,7 +38,7 @@ public class ConfigHandler {
         energyCoalChunk = configuration.getInt("energyCoalChunk", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of Coal Chunk.");
         energyBurnedCoalBall = configuration.getInt("energyBurnedCoalBall", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of Burned Coal Ball.");
         energyDiamond = configuration.getInt("energyDiamond", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of Diamond.");
-        energyMultiToolBase = configuration.getInt("energyMultiToolBase", "Energy Consumption", 10000, 1, 100000, "Sets the energy consumption for the production of MultiToolBase.");
+        energyMultiToolBases = configuration.getInt("energyMultiToolBases", "Energy Consumption", 2500, 1, 100000, "Sets the energy consumption for the production of MultiToolBases.");
 
         if (configuration.hasChanged())
         {

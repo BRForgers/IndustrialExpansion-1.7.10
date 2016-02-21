@@ -29,6 +29,9 @@ public class RecipeManager {
                                         'E',new ItemStack(Items.diamond_axe),
                                         'F',new ItemStack(Items.ender_pearl),
                                         'G',new ItemStack(Items.diamond_hoe));
-        ThermalExpansionHelper.addTransposerFill(ConfigHandler.energyMultiToolBase,new ItemStack(ItemManager.MultiToolBase),new ItemStack(ItemManager.MultiTool),new FluidStack(FluidRegistry.getFluid("ender"), 1000), false);
+        ThermalExpansionHelper.addTransposerFill(ConfigHandler.energyMultiToolBases,new ItemStack(ItemManager.MultiToolBase),new ItemStack(ItemManager.MultiToolBase2),new FluidStack(FluidRegistry.getFluid("ender"), 250), false);
+        ThermalExpansionHelper.addTransposerFill(ConfigHandler.energyMultiToolBases,new ItemStack(ItemManager.MultiToolBase2),new ItemStack(ItemManager.MultiToolBase3),new FluidStack(FluidRegistry.getFluid("ender"), 250), false);
+        ThermalExpansionHelper.addTransposerFill(ConfigHandler.energyMultiToolBases,new ItemStack(ItemManager.MultiToolBase3),new ItemStack(ItemManager.MultiToolBase4),new FluidStack(FluidRegistry.getFluid("ender"), 250), false);
+        ThermalExpansionHelper.addTransposerFill(ConfigHandler.energyMultiToolBases,new ItemStack(ItemManager.MultiToolBase4),new ItemStack(ItemManager.MultiTool),new FluidStack(FluidRegistry.getFluid("ender"), 250), false);
     }
 }

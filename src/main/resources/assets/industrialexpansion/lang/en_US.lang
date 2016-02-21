@@ -8,3 +8,6 @@ item.BurnedCoalBall.name=Burned Coal Ball
 item.CoalChunk.name=Coal Chunk
 item.MultiTool.name=MultiTool
 item.MultiToolBase.name=MultiTool (Empty)
+item.MultiToolBase2.name=MultiTool (25%)
+item.MultiToolBase3.name=MultiTool (50%)
+item.MultiToolBase4.name=MultiTool (75%)
