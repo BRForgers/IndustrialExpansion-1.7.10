@@ -36,6 +36,7 @@ build.xml
 /*.ipr
 /*.iws
 /*.iml
+/exportToHTML
 
 ## Private Stuffs
 /private.properties
