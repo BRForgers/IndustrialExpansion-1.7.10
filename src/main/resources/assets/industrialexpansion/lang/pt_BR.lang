@@ -1,6 +1,9 @@
 //Interface
 itemGroup.tabIndustrialExpansion=Industrial Expansion
 
+//Blocks
+tile.IridiumOre.name=Minério de Iridium
+
 //Items
 item.Test.name=Test
 item.CoalBall.name=Bola de Carvão
@@ -11,3 +14,8 @@ item.MultiToolBase.name=MultiTool (Vazio)
 item.MultiToolBase2.name=MultiTool (25%)
 item.MultiToolBase3.name=MultiTool (50%)
 item.MultiToolBase4.name=MultiTool (75%)
+item.quantumHelmet.name=Capacete Quântico
+item.quantumPlate.name=Peitoral Quântico
+item.quantumLegs.name=Calças Quânticas
+item.quantumBoots.name=Botas Quânticas
+item.Iridium.name=Iridium

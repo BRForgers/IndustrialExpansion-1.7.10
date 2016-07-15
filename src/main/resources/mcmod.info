@@ -5,12 +5,12 @@
   "description": "...",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "http://brazillianforgers.esy.es/",
+  "url": "http://brforgers.cf/",
   "updateUrl": "",
-  "authorList": ["TheBrazillianForgersTeam","Armelin1"],
-  "credits": "Armelin1 for the Idea and Textures",
+  "authorList": ["BRForgers Team"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": [BRForgersCore; ThermalExpansion]
+  "dependencies": [BRCore; ThermalExpansion;]
 }
 ]
