@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "BETA-v1.1.1-var1"
+version = "BETA-v1.1.2-var1"
 group= "brazillianforgers.mods.IndustrialExpansion" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "IndustrialExpansion"
 
