@@ -10,6 +10,8 @@ branches:
     
 before_install:
  - chmod +x gradlew
+notifications:
+  slack: brforgers:mC3i5xzO4ZMSZpg53a9MdncL
 
 //deploy:
   provider: releases
